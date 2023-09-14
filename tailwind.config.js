@@ -8,8 +8,8 @@ export default {
 				screens: {
 					sm: '100%',
 					md: '100%',
-					lg: '1134px', 
-					xl: '1280px',
+					lg: '984px',
+					xl: '1134px',
 				},
       },
       backgroundImage: {
