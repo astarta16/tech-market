@@ -1,13 +1,19 @@
-import React from "react";
-import Header from "./Components/Header/Head"
-import Banner from "./Components/Banner/Banner";
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Banner } from './Components';
+
+import MainLayout from './layouts/MainLayout/mainLayout';
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Banner />
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path='/' element={<Banner />} />
+          <Route path='/about-us' element={<div>about us</div>} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 
