@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
-import playstation from '../../assets/banner/playstation-joystick.png';
-import bannerMacbook from '../../assets/banner/banner-macbook.png';
-import dacoHeadset from '../../assets/banner/daco-headset.png';
 
-export const Banner = () => {
+import playstation from '../../../assets/images/banner/playstation-joystick.png';
+import bannerMacbook from '../../../assets/images/banner/banner-macbook.png';
+import dacoHeadset from '../../../assets/images/banner/daco-headset.png';
+
+export function Banner() {
   return (
     <Fragment>
       <div className='banner-container rounded-lg bg-custom-bg container mx-auto'>
@@ -28,4 +29,4 @@ export const Banner = () => {
       </div>
     </Fragment>
   );
-};
+}

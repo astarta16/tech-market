@@ -1,16 +1,18 @@
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Banner } from './Components';
 
-import MainLayout from './layouts/MainLayout/mainLayout';
+import { MainLayout } from './layouts';
+
+const Home = lazy(() => import('./pages/Home/Home'));
+const Aboutus = lazy(() => import('./pages/Aboutus/Aboutus'));
 
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path='/' element={<Banner />} />
-          <Route path='/about-us' element={<div>about us</div>} />
+          <Route path='/' element={<Home />} />
+          <Route path='/aboutus' element={<Aboutus />} />
         </Route>
       </Routes>
     </Suspense>

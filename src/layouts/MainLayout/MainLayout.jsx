@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import { Header, Footer } from './components';
 
-export default function MainLayout() {
+export function MainLayout() {
   return (
     <div>
       <Header />

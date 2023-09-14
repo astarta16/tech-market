@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '../../../../assets/header/site-logo.svg';
-import UserIco from '../../../../assets/header/user-icon.svg';
-import Favourite from '../../../../assets/header/favourite-icon.svg';
-import Basket from '../../../../assets/header/basket-icon.svg';
-import Search from '../../../../assets/header/search-icon.svg';
+import Logo from '../../../../assets/images/header/site-logo.svg';
+import UserIco from '../../../../assets/images/header/user-icon.svg';
+import Favourite from '../../../../assets/images/header/favourite-icon.svg';
+import Basket from '../../../../assets/images/header/basket-icon.svg';
+import Search from '../../../../assets/images/header/search-icon.svg';
 import { useRef } from 'react';
 
 import BurgerMenu from './Burger';
