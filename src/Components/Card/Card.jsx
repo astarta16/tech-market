@@ -1,6 +1,6 @@
 import noImage from "./../../assets/images/card/no-image.jpg"
-import heartIcon from "./../../assets/images/card/heart-icon.svg"
-import cartIcon from "./../../assets/images/card/cart-icon.svg"
+import HeartIcon from "../../assets/images/card/HeartIcon";
+import CartIcon from "../../assets/images/card/CartIcon";
 
 const TestProduct = {
     name: "I Phone 14 Pro Max midnight purple grey blue brown iphone watch",
@@ -39,12 +39,12 @@ export default function Card({ product }) {
             <div className=" flex justify-between gap-20">
                 <button
                     className={` p-1 ${product.favourite ? "text-red-500" : ""}`}>
-                    <img src={heartIcon} alt="Add to favourites icon" />
+                    <HeartIcon />
                 </button>
 
                 <button
                     className={` p-1 ${product.inCart ? "text-cyan-500" : ""}`}>
-                    <img src={cartIcon} alt="Add to cart icon" />
+                    <CartIcon />
                 </button>
             </div>
         </div>
