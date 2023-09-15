@@ -29,6 +29,9 @@ export default {
         badgeText: '#F8F8F8',
 
       },
+      height: {
+        8.5: "2.125rem"
+      }
     },
   },
   plugins: [],
