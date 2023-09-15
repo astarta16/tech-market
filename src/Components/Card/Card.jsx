@@ -39,7 +39,7 @@ export default function Card({ product }) {
             <div className=" flex justify-between gap-20">
                 <button
                     className={` p-1 ${product.favourite ? "text-red-500" : ""}`}>
-                    {<img src={heartIcon} alt="Add to favourites icon" />}
+                    <img src={heartIcon} alt="Add to favourites icon" />
                 </button>
 
                 <button
