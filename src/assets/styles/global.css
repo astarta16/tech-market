@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400,500');
+
 @layer {
   .footerList {
     @apply flex flex-col  gap-[0.5rem] font-firago;
