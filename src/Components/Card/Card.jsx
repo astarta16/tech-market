@@ -38,12 +38,12 @@ export default function Card({ product }) {
 
             <div className=" flex justify-between gap-20">
                 <button
-                    className={` p-1 ${product.favourite ? "text-red-500" : ""}`}>
+                    className={`p-1 ${product.favourite ? "fill-red-600" : "fill-black"}`}>
                     <HeartIcon />
                 </button>
 
                 <button
-                    className={` p-1 ${product.inCart ? "text-cyan-500" : ""}`}>
+                    className={`p-1 ${product.inCart ? "fill-cyan-400" : "fill-black"}`}>
                     <CartIcon />
                 </button>
             </div>
