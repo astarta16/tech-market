@@ -1,13 +1,15 @@
-import React from "react";
-import Header from "./Components/Header/Head"
-import Banner from "./Components/Banner/Banner";
+import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+
+const Landing = lazy(() => import("../src/pages/Landing"));
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Banner />
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </Suspense>
   );
 }
 
