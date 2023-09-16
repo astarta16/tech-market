@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  .footerList {
+    @apply flex flex-col  gap-[0.5rem] font-firago;
+  }
+
+  .footerListHead {
+    @apply font-medium leading-[1.375rem] text-black1 text-[0.8];
+  }
+
+  .footerListLink {
+    @apply text-gray1 font-normal text-[0.7] leading-[2.0625rem] select-none;
+  }
+}
