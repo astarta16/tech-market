@@ -1,4 +1,4 @@
-import { Banner, SpecialOffers } from './components';
+import {Banner, NewAddedProducts, SpecialOffers} from './components';
 
 function Landing() {
   return (
@@ -7,6 +7,7 @@ function Landing() {
       <div className='container'>
         <SpecialOffers />
       </div>
+        <NewAddedProducts/>
     </>
   );
 }
