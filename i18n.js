@@ -12,12 +12,13 @@ i18n
     fallbackLng: "en",
     detection: {
       order: ["cookie", "htmlTag", "localStorage", "path", "subdomain"],
-      caches: ["cookie"],
+      caches: ["localStorage", "cookie"],
     },
     backend: {
       loadPath: "/locales/{{ns}}/{{lng}}.json",
     },
     ns: ["locales/*"],
+
     interpolation: {
       escapeValue: false,
       formatSeparator: ",",
