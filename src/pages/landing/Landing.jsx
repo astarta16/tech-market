@@ -6,8 +6,8 @@ function Landing() {
   return (
     <>
       <Banner />
-      <div className="container">
-        <div className="flex items-center justify-between gap-6 ">
+      <div className="">
+        <div className="flex items-center justify-between gap-6">
           {SP_DATA.map((item) => (
             <SpecialOffers key={item.id} {...item} />
           ))}
