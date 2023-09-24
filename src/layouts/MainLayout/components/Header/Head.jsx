@@ -19,19 +19,19 @@ export function Header() {
     <>
       <div
         style={{ maxWidth: "1134px" }}
-        className="flex items-center justify-between my-7 m-auto"
+        className="flex items-center justify-between my-7 m-auto "
       >
-        <div className="flex">
+        <div className="flex ">
           <img
-            className="mr-10 cursor-pointer"
+            className="mr-10 cursor-pointer "
             src={Logo}
             alt="Tech E-commerce sales platform logo"
           />
-          <div className="relative mr-20">
+          <div className="relative mr-20 ">
             <input
               style={{ width: "443px" }}
               type="text"
-              className="border rounded-lg pl-2 pr-4 py-2 focus:outline-none focus:border-addButtonColor"
+              className="border rounded-lg pl-2 pr-4 py-2 focus:outline-none focus:border-addButtonColor "
               placeholder="ძებნა"
               ref={inputRef}
             />
@@ -44,8 +44,10 @@ export function Header() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <LanguageSwitcher />
-          <button className="bg-addButtonColor flex justify-center items-center w-28 h-10 rounded-lg">
+          <div className="mx-5">
+            <LanguageSwitcher />
+          </div>
+          <button className="bg-addButtonColor flex justify-center items-center px-4 py-2 rounded-lg">
             დამატება
           </button>
           <div className="flex justify-center items-center gap-12 px-16">
@@ -66,7 +68,7 @@ export function Header() {
               </span>
             </div>
           </div>
-          <div className="bg-logInButtonColor flex gap-5 w-28 h-10 justify-center items-center rounded-lg cursor-pointer">
+          <div className="bg-logInButtonColor flex gap-5 px-4 py-2 justify-center items-center rounded-lg cursor-pointer">
             <img src={UserIco} alt="User login icon" />
             <span>შესვლა</span>
           </div>
