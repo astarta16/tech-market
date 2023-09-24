@@ -1,15 +1,18 @@
-import React from "react";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+
 import Logo from "../../../../assets/images/header/site-logo.svg";
 import UserIco from "../../../../assets/images/header/user-icon.svg";
 import Favourite from "../../../../assets/images/header/favourite-icon.svg";
 import Basket from "../../../../assets/images/header/basket-icon.svg";
 import Search from "../../../../assets/images/header/search-icon.svg";
-import { useRef } from "react";
 
 import BurgerMenu from "./Burger";
 import { LanguageSwitcher } from "../../../../Components/LanguageSwitcher";
 
 export function Header() {
+  const { t } = useTranslation(["Head"]);
+
   const inputRef = useRef(null);
   const handleSearch = () => {
     const inputValue = inputRef.current.value;
@@ -48,7 +51,7 @@ export function Header() {
             <LanguageSwitcher />
           </div>
           <button className="bg-addButtonColor flex justify-center items-center px-4 py-2 rounded-lg">
-            დამატება
+            {t("add")}
           </button>
           <div className="flex justify-center items-center gap-12 px-16">
             <div className="relative">

@@ -1,6 +1,33 @@
+import { useState, useEffect } from "react";
+import i18next from "i18next";
+
 import { Select, ConfigProvider } from "antd";
 
+const languages = [
+  {
+    value: "en",
+    label: "ENG",
+    country_code: "en",
+  },
+  {
+    value: "ge",
+    label: "GEO",
+    country_code: "ge",
+  },
+];
+
 export const LanguageSwitcher = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState(i18next.language);
+
+  const handleChangeLanguage = (value) => {
+    i18next.changeLanguage(value);
+    setSelectedLanguage(value);
+  };
+
+  useEffect(() => {
+    setSelectedLanguage(i18next.language);
+  }, []);
+
   return (
     <ConfigProvider
       theme={{
@@ -14,12 +41,10 @@ export const LanguageSwitcher = () => {
       }}
     >
       <Select
-        defaultValue="ge"
+        defaultValue={selectedLanguage}
         style={{ width: 70 }}
-        options={[
-          { value: "en", label: "ENG" },
-          { value: "ge", label: "GEO" },
-        ]}
+        options={languages}
+        onChange={handleChangeLanguage}
       />
     </ConfigProvider>
   );
