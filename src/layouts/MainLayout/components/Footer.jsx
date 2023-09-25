@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import { useTranslation } from "react-i18next";
 
 // import FacebookIcon from '../../../../assets/images/footer/FacebookIcon';
 // import InstaIcon from '../../../../assets/images/footer/InstaIcon';
@@ -8,46 +10,47 @@ import { Link } from 'react-router-dom';
 //note: footerList & footerListHead & footerListLink are custom classes located in ./assets/styles/global.css
 
 export function Footer() {
+  const { t } = useTranslation(["Footer"]);
   return (
-    <div className='container flex justify-between border-t-[0.1px] border-black mt-[6rem] pt-[10px]'>
-      <div className='flex gap-[6rem]'>
-        <ul className=' footerList'>
-          <li className='footerListHead'>
-            <h3>მენიუ</h3>
+    <div className="container flex justify-between border-t-[0.1px] border-black mt-[6rem] pt-[10px]">
+      <div className="flex gap-[6rem]">
+        <ul className=" footerList">
+          <li className="footerListHead">
+            <h3>{t("მენიუ")}</h3>
           </li>
-          <li className='footerListLink'>
-            <Link to='#'>მთავარი</Link>
+          <li className="footerListLink">
+            <Link to="#">{t("მთავარი")}</Link>
           </li>
-          <li className='footerListLink'>
-            <Link to='#'>ხშირად დასმული კითხვები</Link>
-          </li>
-        </ul>
-
-        <ul className=' footerList'>
-          <li className='footerListHead'>
-            <h3>ჩემი გვერდი</h3>
-          </li>
-          <li className='footerListLink'>
-            <Link to='#'>ჩემი განცხადებები</Link>
-          </li>
-          <li className='footerListLink'>
-            <Link to='#'>ანგარიშის რედაქტირება</Link>
+          <li className="footerListLink">
+            <Link to="#">{t("კითხვები")}</Link>
           </li>
         </ul>
 
-        <ul className=' footerList'>
-          <li className='footerListHead'>
-            <h3>კონტაქტი</h3>
+        <ul className=" footerList">
+          <li className="footerListHead">
+            <h3>{t("ჩემი_გვერდი")}</h3>
           </li>
-          <li className='footerListLink'>
-            <Link to='mailto:techmarket@gmail.com'>techmarket@gmail.com</Link>
+          <li className="footerListLink">
+            <Link to="#">{t("ჩემი_განცხადებები")}</Link>
           </li>
-          <li className='footerListLink'>
-            <Link to='callto://+995123456789'>+995123456789</Link>
+          <li className="footerListLink">
+            <Link to="#">{t("ანგარიშის_რედაქტირება")}</Link>
+          </li>
+        </ul>
+
+        <ul className=" footerList">
+          <li className="footerListHead">
+            <h3>{t("კონტაქტი")}</h3>
+          </li>
+          <li className="footerListLink">
+            <Link to="mailto:techmarket@gmail.com">techmarket@gmail.com</Link>
+          </li>
+          <li className="footerListLink">
+            <Link to="callto://+995123456789">+995123456789</Link>
           </li>
         </ul>
       </div>
-      <div className='flex gap-2 p-[0.625rem]'>
+      <div className="flex gap-2 p-[0.625rem]">
         {/* <Link to='#'>
           <FacebookIcon />
         </Link>

@@ -31,8 +31,8 @@ export default {
         special_offers: "#000",
       },
       height: {
-        8.5: "2.125rem"
-      }
+        8.5: "2.125rem",
+      },
     },
   },
   plugins: [],
