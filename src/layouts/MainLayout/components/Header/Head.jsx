@@ -8,7 +8,7 @@ import Basket from "../../../../assets/images/header/basket-icon.svg";
 import Search from "../../../../assets/images/header/search-icon.svg";
 
 import BurgerMenu from "./Burger";
-import { LanguageSelect } from "../../../../Components";
+import { LanguageSelect } from "../../../../../src/Components/LanguageSelect";
 
 export function Header() {
   const { t } = useTranslation(["Head"]);
