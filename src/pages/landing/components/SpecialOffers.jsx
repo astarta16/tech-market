@@ -20,9 +20,7 @@ export const SpecialOffers = ({ images, title, amount, width, height }) => {
           {title}
         </h4>
         <h5 className="text-special_offers opacity-[0.6] p-[10px]">
-          {amount <= 1
-            ? `${amount} ${t("პროდუქტი")}`
-            : `${amount} ${t("პროდუქტი")}s`}
+          {amount} {t("პროდუქტი")}
         </h5>
       </div>
     </div>
