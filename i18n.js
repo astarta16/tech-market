@@ -15,9 +15,9 @@ i18n
       caches: ["localStorage", "cookie"],
     },
     backend: {
-      loadPath: "/locales/{{ns}}/{{lng}}.json",
+      loadPath: "locales/{{ns}}/{{lng}}.json",
     },
-    ns: ["locales/*"],
+    ns: [],
 
     interpolation: {
       escapeValue: false,
