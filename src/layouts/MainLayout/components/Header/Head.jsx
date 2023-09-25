@@ -8,7 +8,7 @@ import Basket from "../../../../assets/images/header/basket-icon.svg";
 import Search from "../../../../assets/images/header/search-icon.svg";
 
 import BurgerMenu from "./Burger";
-import { LanguageSwitcher } from "../../../../Components/LanguageSwitcher";
+import { LanguageSelect } from "../../../../Components";
 
 export function Header() {
   const { t } = useTranslation(["Head"]);
@@ -48,7 +48,7 @@ export function Header() {
         </div>
         <div className="flex justify-center items-center">
           <div className="mx-5">
-            <LanguageSwitcher />
+            <LanguageSelect />
           </div>
           <button className="bg-addButtonColor flex justify-center items-center px-4 py-2 rounded-lg">
             {t("დამატება")}

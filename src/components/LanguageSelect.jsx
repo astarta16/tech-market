@@ -16,7 +16,7 @@ const languages = [
   },
 ];
 
-export const LanguageSwitcher = () => {
+export const LanguageSelect = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(i18next.language);
 
   const handleChangeLanguage = (value) => {

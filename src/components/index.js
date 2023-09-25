@@ -1,2 +1,2 @@
 export { Card } from "./Card";
-export { LanguageSwitcher } from "./LanguageSwitcher";
+export { LanguageSelect } from "./LanguageSelect";
