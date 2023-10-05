@@ -1,11 +1,13 @@
 import noImage from '../assets/images/card/no-image.jpg';
 import HeartIcon from '../assets/images/card/HeartIcon';
 import CartIcon from '../assets/images/card/CartIcon';
+import { Link } from 'react-router-dom';
 
 const TestProduct = {
   name: 'I Phone 14 Pro Max midnight purple grey blue brown iphone watch',
   price: 150,
   discount: 20,
+  id: 24,
   image: './src/assets/images/card/iphone-image.jpg',
   favourite: false,
   inCart: false,
@@ -16,9 +18,9 @@ export function Card({ product }) {
   if (product == undefined) product = TestProduct; // მხოლოდ საცდელად
 
   return (
-    <div className=' w-52 px-3 py-4 rounded-2xl bg-white leading-4 children:mb-[3px]'>
+    <div className='w-52 px-3 py-4 rounded-2xl bg-white leading-4 children:mb-[3px]'>
       <img
-        className=' w-40 h-44 p-2 mx-auto object-cover'
+        className='w-40 h-44 p-2 mx-auto object-cover'
         src={product?.image || noImage}
         alt={product?.name + ' picture'}
       />
@@ -36,15 +38,18 @@ export function Card({ product }) {
         )}
       </div>
 
-      <div className='py-2 mx-4'>
+      <Link
+        to={`/product_page/${product.id}`}
+        className='block py-2 px-4'
+      >
         <h3 className='relative font-medium h-8.5 overflow-hidden'>
           {product.name.length > 27
             ? product.name.slice(0, 26) + '...'
             : product.name}
         </h3>
-      </div>
+      </Link>
 
-      <div className='flex justify-between px-4'>
+      <div className='flex justify-between mx-4'>
         <button
           className={`p-1 ${product.favourite ? 'fill-red-600' : 'fill-black'}`}
         >

@@ -2,6 +2,7 @@ import { Banner, SpecialOffers } from "./components";
 import { useTranslation } from "react-i18next";
 
 import { SP_DATA } from "./data/SpecialOffers";
+import { Card } from "../../components"
 
 function Landing() {
   const { t } = useTranslation(["Landing"]);
@@ -17,6 +18,7 @@ function Landing() {
           ))}
         </div>
       </div>
+      <Card />
     </>
   );
 }
