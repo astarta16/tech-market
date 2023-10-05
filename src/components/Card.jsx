@@ -4,35 +4,33 @@ import CartIcon from '../assets/images/card/CartIcon';
 
 const TestProduct = {
   name: 'I Phone 14 Pro Max midnight purple grey blue brown iphone watch',
-  price: '150',
-  discount: '20',
+  price: 150,
+  discount: 20,
   image: './src/assets/images/card/iphone-image.jpg',
   favourite: false,
   inCart: false,
 };
 
 export function Card({ product }) {
-  if (product == undefined) {
-    // მხოლოდ საცდელად
-    product = TestProduct;
-  }
+
+  if (product == undefined) product = TestProduct; // მხოლოდ საცდელად
 
   return (
-    <div className=' flex flex-col items-center gap-1 w-48 m-12 p-2 rounded-2xl bg-white leading-4'>
+    <div className='w-48 p-2 rounded-2xl bg-white leading-4'>
       <img
-        className=' w-40 h-40 p-2 object-center'
+        className=' w-40 h-40 p-2 object-cover'
         src={product?.image || noImage}
         alt={product?.name + ' picture'}
       />
 
-      <div className=' flex justify-between w-32'>
-        <h3 className=' font-medium'>
+      <div className='flex justify-between w-32'>
+        <h3 className='font-medium'>
           {product?.price - (product?.price * product?.discount) / 100 || '---'}{' '}
           ₾
         </h3>
 
         {product?.discount > 0 && (
-          <h3 className=' font-medium line-through text-red-500'>
+          <h3 className='font-medium line-through text-red-500'>
             {product?.price || '---'} ₾
           </h3>
         )}
@@ -46,7 +44,7 @@ export function Card({ product }) {
         </h3>
       </div>
 
-      <div className=' flex justify-between gap-20'>
+      <div className='flex justify-between'>
         <button
           className={`p-1 ${product.favourite ? 'fill-red-600' : 'fill-black'}`}
         >
