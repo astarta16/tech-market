@@ -6,11 +6,27 @@ export default {
       container: {
         center: true,
         screens: {
-          sm: "100%",
-          md: "100%",
+          sm: "576px",
+          md: "768px",
           lg: "984px",
           xl: "1134px",
         },
+      },
+      screens: {
+        "2xl": { max: "1536px" },
+        // => @media (max-width: 1536px) { ... }
+
+        xl: { max: "1280px" },
+        // => @media (max-width: 1280px) { ... }
+
+        lg: { max: "1024px" },
+        // => @media (max-width: 1024px) { ... }
+
+        md: { max: "768px" },
+        // => @media (max-width: 768px) { ... }
+
+        sm: { max: "640px" },
+        // => @media (max-width: 640px) { ... }
       },
       backgroundImage: {
         "custom-bg": "linear-gradient(180deg, #90658B 0%, #E4979E 100%)",
