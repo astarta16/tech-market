@@ -15,7 +15,7 @@ const TestProduct = {
 
 export function Card({ product }) {
 
-  if (product == undefined) product = TestProduct; // მხოლოდ საცდელად
+  if (!product) product = TestProduct; // მხოლოდ საცდელად
 
   return (
     <div className='w-52 px-3 py-4 rounded-2xl bg-white leading-4 children:mb-[3px]'>
@@ -50,16 +50,12 @@ export function Card({ product }) {
       </Link>
 
       <div className='flex justify-between mx-3'>
-        <button
-          className={`p-1 ${product.favourite ? 'fill-red-600' : 'fill-black'}`}
-        >
-          <HeartIcon />
+        <button className='p-1'>
+          <HeartIcon active={product.favourite} />
         </button>
 
-        <button
-          className={`p-1 ${product.inCart ? 'fill-cyan-400' : 'fill-black'}`}
-        >
-          <CartIcon />
+        <button className='p-1'>
+          <CartIcon active={product.inCart} />
         </button>
       </div>
     </div>
