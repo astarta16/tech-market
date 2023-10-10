@@ -25,7 +25,7 @@ export function Card({ product }) {
         alt={product?.name + ' picture'}
       />
 
-      <div className='flex justify-between mx-6 children:font-medium'>
+      <div className='flex justify-between mx-4 children:font-medium'>
         <h3>
           {product?.price - (product?.price * product?.discount) / 100 || '---'}{' '}
           ₾
@@ -42,14 +42,14 @@ export function Card({ product }) {
         to={`/product_page/${product.id}`}
         className='block py-2 px-4'
       >
-        <h3 className='relative font-medium h-8.5 overflow-hidden'>
+        <h3 className='font-semibold'>
           {product.name.length > 27
             ? product.name.slice(0, 26) + '...'
             : product.name}
         </h3>
       </Link>
 
-      <div className='flex justify-between mx-4'>
+      <div className='flex justify-between mx-3'>
         <button
           className={`p-1 ${product.favourite ? 'fill-red-600' : 'fill-black'}`}
         >
