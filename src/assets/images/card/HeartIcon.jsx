@@ -4,7 +4,7 @@ export default function HeartIcon({ active }) {
             className={active
                         ? 'fill-red-600 drop-shadow-[0_0_1px_red]'
                         : 'fill-black'}
-            width="20"
+            width="100%"
             height="21"
             viewBox="0 0 20 21"
             xmlns="http://www.w3.org/2000/svg">
