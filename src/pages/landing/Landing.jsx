@@ -1,4 +1,4 @@
-import { Banner, SpecialOffers } from "./components";
+import { Banner, SpecialOffers, SpecialCard } from "./components";
 import { useTranslation } from "react-i18next";
 
 import { SP_DATA } from "./data/SpecialOffers";
@@ -9,6 +9,7 @@ function Landing() {
 
   return (
     <>
+      <SpecialCard />
       <Banner />
       <div className="">
         <div className="flex items-center justify-between gap-6">
