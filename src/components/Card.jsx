@@ -18,14 +18,14 @@ export function Card({ product }) {
   if (!product) product = TestProduct; // მხოლოდ საცდელად
 
   return (
-    <div className=' w-36 sm:w-52 text-[0.75rem] sm:text-base leading-3 sm:leading-4 px-3 py-4 rounded-2xl bg-white children:mb-[3px]'>
+    <div className=' w-36 sm:w-52 text-[0.75rem] sm:text-base leading-3 sm:leading-4 px-3 py-4 rounded-2xl bg-white [&>*]:mb-[3px]'>
       <img
         className=' w-32 sm:w-40 h-32 sm:h-44 mb-0 p-1 sm:p-2 mx-auto object-cover'
         src={product?.image || noImage}
         alt={product?.name + ' picture'}
       />
 
-      <div className='flex justify-between mx-4 children:font-medium'>
+      <div className='flex justify-between mx-4 [&>*]:font-medium'>
         <h3>
           {product?.price - (product?.price * product?.discount) / 100 || '---'}{' '}
           ₾
@@ -49,7 +49,7 @@ export function Card({ product }) {
         </h3>
       </Link>
 
-      <div className='flex justify-between mx-3 children:px-1 children:w-5 children:sm:w-auto'>
+      <div className='flex justify-between mx-3 [&>*]:px-1 [&>*]:w-5 [&>*]:sm:w-auto'>
         <button>
           <HeartIcon active={product.favourite} />
         </button>
